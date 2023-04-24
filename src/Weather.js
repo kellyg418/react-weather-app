@@ -32,7 +32,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "7200396c99b3a499ac55f4b077c42cf3";
+    const apiKey = "7059cb165caa3316bff682d263a01b1e";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -61,7 +61,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coord} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
